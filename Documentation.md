@@ -3,34 +3,13 @@ This documentation is for the stable release of Eclipse Library.
 
 ## Booting the Library
 ```lua
-local EclipseLib = loadstring(game:HttpGet(('(https://raw.githubusercontent.com/Eclipes12/EclipseLib/refs/heads/main/source)')))()
+local EclipseLib = loadstring(game:HttpGet(('https://pastebin.com/PjMJpm30')))()
 ```
-## Creating a Table
-```lua
-local EclipseLib = {
-    Elements = {},      -- Stores all UI elements like buttons, toggles, etc.
-    ThemeObjects = {},  -- Stores objects related to themes
-    Connections = {},   -- Stores connections (for events)
-    Flags = {},         -- Flags for settings
-    Themes = {
-        Default = {
-            Main = Color3.fromRGB(25, 25, 25),
-            Second = Color3.fromRGB(32, 32, 32),
-            Stroke = Color3.fromRGB(60, 60, 60),
-            Divider = Color3.fromRGB(60, 60, 60),
-            Text = Color3.fromRGB(240, 240, 240),
-            TextDark = Color3.fromRGB(150, 150, 150)
-        }
-    },
-    SelectedTheme = "Default",  -- Default theme is selected initially
-    Folder = nil,               -- Folder for saving configurations (if needed)
-    SaveCfg = false             -- Option to save configuration
-}
-```
+
 
 ## Creating a Window
 ```lua
-local Window = OrionLib:MakeWindow({
+local Window = EclipseLib:MakeWindow({
     Name = "Eclipse UI",
     HidePremium = false,
     SaveConfig = true,
