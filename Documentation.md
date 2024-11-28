@@ -3,7 +3,7 @@ This documentation is for the stable release of Eclipse Library.
 
 ## Booting the Library
 ```lua
-local EclipseLib = loadstring(game:HttpGet(('https://pastebin.com/PjMJpm30')))()
+local EclipseLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Eclipes12/EclipseLib/refs/heads/main/source')))()
 ```
 
 
