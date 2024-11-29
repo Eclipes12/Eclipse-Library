@@ -975,20 +975,12 @@ function EclipseLib:MakeWindow(WindowConfig)
 				end)
 
 				AddConnection(Click.MouseButton1Up, function()
-					local r = math.clamp(EclipseLib.Themes[EclipseLib.SelectedTheme].Second.R * 255 + 3, 0, 255)
-                                        local g = math.clamp(EclipseLib.Themes[EclipseLib.SelectedTheme].Second.G * 255 + 3, 0, 255)
-                                        local b = math.clamp(EclipseLib.Themes[EclipseLib.SelectedTheme].Second.B * 255 + 3, 0, 255)
-
-                                         TweenService:Create(
-                                                 ToggleFrame,
-                                         TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out),
-                                                         {BackgroundColor3 = Color3.fromRGB(r, g, b)}
-                                                  ):Play()
+					TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(EclipseLib.Themes[EclipseLib.SelectedTheme].Second.R * 255 + 3, EclipseLib.Themes[EclipseLib.SelectedTheme].Second.G * 255 + 3, EclipseLib.Themes[EclipseLib.SelectedTheme].Second.B * 255 + 3)}):Play()
 					SaveCfg(game.GameId)
 					Toggle:Set(not Toggle.Value)
 				end)
 
-				AddConnection(Click.MouseButton1Down, function()
+                                AddConnection(Click.MouseButton1Down, function()
 					TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(EclipseLib.Themes[EclipseLib.SelectedTheme].Second.R * 255 + 6, EclipseLib.Themes[EclipseLib.SelectedTheme].Second.G * 255 + 6, EclipseLib.Themes[EclipseLib.SelectedTheme].Second.B * 255 + 6)}):Play()
 				end)
 
